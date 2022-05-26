@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	div> p{
+		background-color: yellow;
+		padding:20px;
+		
+		display:none;
+	}
+</style>
+</head>
+<body>
+
+<h3>ex08_03.html - js 툴팁 기능 구현</h3>
+
+<!-- <div onmouseover="div_mouseover()" onmouseout="div_mouseout()"> -->
+<div>
+	HOver Over Me
+	<p>Lorem ipsum dolor sit amet.</p>
+	<p>Vel nulla nemo sunt consectetur!</p>
+	<p>Explicabo vitae ipsa suscipit laudantium.</p>
+</div>
+<!-- 시험0524 -->
+<!-- js 사용 -->
+<script>
+/* 
+	function div_mouseover(){
+		// console.log("onmouseover")  // 이벤트 확인
+		// 풍선도움말 (툴팁) show
+		document.querySelector("div > p:first-child").style.display = "block"
+	}
+	function div_mouseout(){
+		// console.log("onmouseout")   // 이벤트 확인
+		// 풍선도움말 (툴팁) hide
+		document.querySelector("div > p:first-child").style.display = "none"
+	}
+ */
+</script>
+<!-- jquery 사용 수정 -->
+<script>
+/* 
+	$("div").mouseover(function(event) {
+		//console.log("onmouseover")
+		$("div > p:first-child").show();
+	})
+	$("div").mouseout(function(event) {
+		//console.log("onmouseout") 
+		$("div > p:first-child").hide();
+	})
+*/
+/* 
+ 	$("div")
+ 		.mouseover(function(event) {
+		//$("div > p:first-child").show();
+		$("p:first-child", this).show();
+		})
+		.mouseout(function(event) {
+		$("div > p:first-child").hide();
+		})
+ */
+ 	$("div").hover(
+ 		function(event){
+ 			$("p:first-child", this).show();
+ 		},function(event){
+ 			$("p:first-child", this).hide();
+ 		}
+ 	)
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	.center{
+		border:3px solid green;
+		width:50%;
+		
+		/* div요소를 가운데 정렬 */
+		margin: 0 auto;
+		
+		/* Hello World! 텍스틀 가운데 정렬 */
+		text-align:center;
+	}
+</style>
+<style>
+	img{
+		width:40%;
+		display:block;
+		margin:0 auto;
+	}
+</style>
+<style>
+	.right{
+		width:250px;
+		border: 3px solid #73ad21;
+		
+		/*
+		absolute : 일반 흐름에서 제거되고, 요소 겹칠 수도 있음
+		
+		position:absolute;
+		right:0;
+		*/
+		
+		float:right;
+	}
+	/* 컨테이너 오버플로 발생 */
+	.clearfix::after{
+		content:"";
+		clear:both;
+		display:table;
+	}
+</style>
+</head>
+<body>
+<h3>css 레이아웃 : 수평 정렬, 수직 정렬</h3>
+
+<!-- .center>p>{Hello World!} -->
+<div class="center">
+	<p>Hello World!</p>
+</div>
+
+<h3>image 가운데 정렬</h3>
+<img alt="" src="../images/paris.jpg">
+
+
+<h3>position속성 - 왼쪽/오른쪽 정렬</h3>
+<!-- .right>p>lorem -->
+<div class="right">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+			rerum velit ratione illo eaque omnis fuga veniam ullam sequi quos!
+			Aliquam quibusdam nesciunt consectetur minima aspernatur odio soluta
+			commodi corrupti.</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+1. css 선택자(selector)에 대해서 설명하세요. 
+  ㄱ. .form-container input[type="text"],  .form-container input[type="password"]
+클래스가 인 .form-container 자손 중 input 에 타입이 text인 것과 .form-container 자손 중 input 에 타입이 password
+  ㄴ. .form-container .btn:hover, .open-button:hover
+.form-container 자손중 btn에 마우스 커서를 올려둔 상태 와 .open-button에 마우스 커서를 올려둔 상태
+  ㄷ. .form-container .btn
+.form-container 안에 .btn
+  ㄹ. input[type=submit]:hover
+input 태그들 중 type가 submit인 태그에 마우스 커서를 올려둔 경우
+  ㅁ. div:last-child
+body에서 맨 마지막에 있는 태그가 div인 경우
+  ㅂ. .pagination a:hover:not(.active)
+.pagination안에 a중 .active가 아닌 경우
+  ㅅ. tr:nth-child(even)
+body에서 있는 태그 순서 중 짝수번의 tr
+        tr:nth-child(odd)
+body에서 있는 태그 순서 중 홀수번의 tr
+  ㅇ. tr:hover:not(:first-child)
+
+  ㅈ. div:nth-child(2)
+body에서 있는 태그 순서 중 2번째에 div인 태그
+       div:nth-of-type(2)
+div 태그들 중 2번째의 div 태그
+  ㅊ. :first-child
+body 첫번째 태그
+       :last-child
+body 마지막 태그
+       :firt-of-type
+:의 첫번째
+       :last-of-type
+:의 마지막
+       
+2. css 결합자 설명하세요. 
+  ㄱ. div p 		div 자식 p 와 후손 p
+  ㄴ. div > p 		div 직계 자식 p
+  ㄷ. div + p		div  바로 뒤에 p
+  ㄹ. div ~ p        	div 인접하지 않아도 되는 모든 p
+
+3. 의사클래스와 의사요소에 대해서 설명하세요 . 
+   ㄱ. 의사클래스   :  요소의 특정 상태
+   ㄴ. 의사요소     :: 요소의 지정된 부분에만 스타일 지정
+   
+4.  js 코딩을 jquery로 변경하세요 
+<script>
+   document.querySelector("button.open-button").onclick = function (){
+	   document.getElementById("myForm").style.display = "block";
+   }
+   
+   document.querySelector("button.btn.cancel").onclick = function (){
+	   document.getElementById("myForm").style.display = "none";
+   }
+
+$("button.open-button").click(function(){
+	$("myForm").css("display","block")
+$("button.btn.cancel").click(function(){
+	$("myForm").hide
+})
+</script>
+
+
+5.  반응형 웹을 만드는 미디어 쿼리에 대해서 설명하세요 
+<style> 
+   @media   only screen and  ( max-width:600px ){   
+       .col-25, .col-75, input[type=submit]{
+          width:100%;
+          margin-top:0;
+       }
+   }
+</style>
+
+6.   아래 "Hello World!" 문자열이 수평/수직 가운데로 배치되도록 css 설정을 추가하세요. 
+   ( 조건 :  여러가지 방법 중에  transform 속성을 사용하세요 )
+<div class="center">
+	<p>Hello World!</p>
+</div>  
+
+<style>
+  .center{
+    width:50%;
+    border:3px solid green;
+    margin:0 auto; 
+    height: 200px; 
+}
+  
+7. css 코딩에 대해서 설명하세요.  
+   ( css 선택자에 대해서 중점적으로 설명하세요. )
+<style>
+  div:hover > p:first-child{
+      display: block;
+   }
+</style>  
+
+div 직계 자식 태그 1번째가 p인 태그에 마우스 커서를 올려뒀을때 블럭모드
+
+8. 아래 버튼에 마우스를 올릴때와 내릴때 이벤트를 처리해서 배경색을 바꾸는 js 코딩을 하세요 .
+   ( mouseover 이벤트일 경우 배경색 파랑)
+   ( mouseout 이벤트일 경우 배경색 빨강)
+   
+ <style>
+   button{
+     background-color:red;
+   }
+ </style> 
+  <button>마우스 롤오버효과</button>
+  <button>마우스 롤오버효과</button>
+  <button>마우스 롤오버효과</button>
+  
+
+var btns = document.querySelectorAll("button")
+  	// alert(btns.length)
+  	for (var i = 0; i < btns.length; i++) {
+		//btns[i].onclick = function(){
+			//alert(btns.length)
+		//}
+		btns[i].onmouseover = function(){
+			//console.log("mouseover")
+			this.style.backgroundColor ="blue"
+		}
+		btns[i].onmouseout = function(){
+			console.log("mouseout")
+			this.style.backgroundColor = "red"
+		}
+		  <script>
+9. 위의 코딩을 jquery 로 코딩하세요. 
+
+$("button").hover(
+	function(){
+		$(this).css("background-color", "blue")
+	} // mouseover
+	, function(){
+		$(this).css("background-color", "red")
+	}// mouseout
+)
+
+10. 의사 클래스 설명
+  ㄱ. :empty							콘텐츠가 비어져 있는 상태 <div></div>
+  ㄴ. :disabled   /   :enabled		
+  ㄷ. :focus
+  ㄹ. :checked
+  ㅁ. :active
+  ㅂ. :not()
+  
+ 11.  의사 요소 설명
+   ㄱ. p.intro::first-line
+   		p태그의 intro클래스의 특정부분 첫번째 라인
+   ㄴ. p.intro::first-letter
+   ㄷ. h1::before{
+		     content:url('../images/searchicon.png');
+		   }
+		h1 앞에 이미지
+   ㄹ. h1::after{
+		     content:"- Tutorial";
+		     color:red;
+		     font-style: italic;
+		   }
+	h1 뒤에 content와 색과 font-style
+    ㅂ. ::marker{
+		     color:red;
+		     font-size:23px;
+		  }
+    ㅅ. ::selection{
+		     color:red;
+		     background-color: yellow;
+		  }
+	글자 드래그 시 글자색 빨강 배경색 노랑
+
+12.  opacity 투명도 설정과   rgba()  투명도 설정 차이점을 설명하세요. 
+자식에게 상속이 되는지 안되는지
+
+

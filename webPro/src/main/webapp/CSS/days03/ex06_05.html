@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>seonghan 2022. 5. 23. - 오후 12:41:04</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	#panel, .flip{
+		font-size: 16px;
+		padding:10px;
+		background-color: #4acf50;
+		color: white;
+		text-align: center;
+		margin: auto;
+		border: 1px solid #a6d8a8;
+	}
+	#panel{
+		display: none;
+	}
+</style>
+</head>
+<body>
+
+<!-- p.flip>{Click to show panel}^#panel>p*3>lorem -->
+<p class="flip">Click to show/hide panel</p>
+<div id="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quod vero repudiandae asperiores dolorum laboriosam aliquam cumque necessitatibus illo doloribus earum quam corrupti tempora provident dolorem esse nulla voluptatibus aut.</p>
+	<p>Nisi fuga doloribus consequatur ex recusandae sint id asperiores dolorum dolore sequi repellat voluptatem officia sit voluptates accusamus suscipit dignissimos ad laborum quae et! Repellendus suscipit velit nesciunt tenetur vero.</p>
+	<p>Sed illo optio voluptas earum laboriosam facere sequi rem nemo laborum autem quam iste quod dolorum soluta ullam ea cupiditate exercitationem beatae non aspernatur cum illum enim nam sunt voluptate!</p>
+</div>
+
+<script>
+	$("p.flip").click(function(event) {
+		// jquery method : toggle() 토글
+		//$("#panel").toggle();
+		$("#panel").slideToggle();
+	})
+
+	/* 
+	$("p.flip").click(function(event) {
+		//console.log( $ ("#panel").css("display"))
+		if ($("#panel").css("display")=="none") {
+			//$("#panel").css("display","block")
+			$("#panel").show();
+		} else {
+			//$("#panel").css("display","none")
+			$("#panel").hide();
+		}
+	}) 
+	*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<style>
+p{
+	/* 스타일적용대상자==선택자==selector */
+}
+</style>
+</head>
+<body>
+
+<!-- 
+[Emmet 설명]
+1. https://ko.wikipedia.org/wiki/%EC%97%90%EB%B0%8B_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)
+2. HTML XML XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인.
+3. 젠코딩(Zen coding)으로 부르다가 에밋(Emmet)으로 이름을 변경
+4. https://emmet.io/
+
+Ctrl + E 단축기 : [E]xpand Abbreviation
+
+-->
+<h3>ex08.html</h3>
+Emmet은 CSS 선택자(selector)와 유사한 구문을 사용한다.
+
+<!-- 
+<ul>
+<li></li>
+</ul>
+ -->
+<!-- 
+ 중첩연산자 : 
+ㄱ. >		자손(자식)
+ㄴ. +     형제자매( 동일한 수준의 요소 )
+ㄷ. ^		동반( 상위 요소 )		
+ㄹ. () 	하위트리
+ -->
+ <!-- ul>li -->
+ <ul>
+ 	<li></li>
+ </ul>
+<!-- div>ul>li -->
+<!-- 
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+-->
+
+<div></div>
+<p></p>
+<ul>
+<li></li>
+</ul>
+
+<div>
+	<p></p>
+</div>
+<!-- ---------------------------------------------------------------- -->
+<!-- div+p -->
+<div></div>
+<p></p>
+<!-- div+p+ul -->
+<!-- div+p+ul>li -->
+<div></div>
+<p></p>
+<ul>
+	<li></li>
+</ul>
+
+<div></div>
+<p></p>
+<blockquote>인용구</blockquote>
+<!-- ---------------------------------------------------------------- -->
+<!-- div+div>p>span+em -->
+<div></div>
+<div>
+	<p>
+	<span></span>
+	<em></em>
+	</p>
+</div>
+
+<!-- div+div>p>span+em^bq -->
+<!-- div+div>(p>span+em)+bq -->
+<div></div>
+<div>
+	<p><span></span><em></em></p>
+	<blockquote></blockquote>
+</div>
+
+<!-- div+div>p>span+em^^bq -->
+<!-- div+(div>p>span+em)+bq -->
+<div></div>
+<div>
+	<p><span></span><em></em></p>
+</div>
+<blockquote></blockquote>
+
+
+
+
+</body>
+</html>

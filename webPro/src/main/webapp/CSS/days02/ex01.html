@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	/* 내부( internal ) CSS 적용방식 */
+	p{
+		/* 1. 표준 색상명 ( 140개 ) */
+		/* background-color: Tomato; */
+		/* 5. HSL - hue(색조)/saturation(채도)/lightness(밝기) */
+		background-color: hsl(9,100%,64%);
+		
+		/* RGB(0~255,0~255,0~255) */
+		/* color:white; */
+		/* color:rgb( 255,255,255); */
+		/* 3. #16진수 */
+		/* color:#ffffff */
+		color:#fff;
+	}
+
+</style>
+</head>
+<body>
+<h3>css/days02/ex01.html - 색상 지정</h3>
+<pre>
+1. 표준 색상명(140개)
+2. RGB( 0~255, 0~255, 0~255 )		- red/green/blue 색의 3원소
+3. #16진수										- HEX == 16진수
+4. RGBA(alpha 투명도 0.0 ~ 1.0)
+5. HSL - hue( 색조 ) / saturation( 채도 ) / lightness( 밝기 )
+			0~360 				0~100%  			0(검정) ~ 100(흰색)&
+			0(빨강)
+			120(녹색)
+			240(파랑)
+6. HSLA(alpha 투명도 0.0 ~ 1.0)
+</pre>
+
+<!-- p*3>lorem5 -->
+<p style="background-color: hsl(9,100%,64%,0.5)">Lorem ipsum dolor sit amet.</p>
+<p>Numquam accusantium doloremque. Voluptates distinctio.</p>
+<p>Doloremque voluptate deserunt magnam quibusdam.</p>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type = "image/x-icon" href = "../images/SiSt.ico" >
+<style>
+	table{
+	border:1px solid black;
+	width:400px;
+	/*width:100%;*/
+	font-size:12px;
+	}
+	td{
+	border:1px solid black;
+	}
+</style>
+</head>
+<body>
+
+<h3>ex07.html - table 태그</h3>
+1. 데이터를 행과 열로 정렬할 수 있는 태그<br>
+2. 예) dept 테이블 <br>
+10   ACCOUNTING   NEW YORK <br>
+20   RESEARCH   DALLAS<br>
+30   SALES   CHICAGO<br>
+40   OPERATIONS   BOSTON<br>
+
+<!-- 
+xhtml 1.0 = html 4.0 + xml 1.0
+<br></br> == <br/>
+<hr/>
+-->
+<hr>
+<!-- 테이블 정의 -->
+<!-- <table border="1" width="400px"> -->
+<table>
+	<!-- 테이블 행(row) -->
+	<thead>
+	<tr>
+	<td align="center"><b>deptno</b></td>
+	<td align="center"><b>dname</b></td>
+	<td align="center"><b>loc</b></td>
+	</tr>
+	</thead>
+	<tbody>
+		<tr>
+	<td>10</td>
+	<td>ACCOUNTING</td>
+	<td>NEW YORK</td>
+	</tr>
+	<tr>
+	<td>20</td>
+	<td>RESEARCH</td>
+	<td>DALLAS</td>
+	</tr>
+	<tr>
+	<td>30</td>
+	<td>SALES</td>
+	<td>CHICAGO</td>
+	</tr>
+	<tr>
+	<td>40</td>
+	<td>OPERATIONS</td>
+	<td>BOSTON</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

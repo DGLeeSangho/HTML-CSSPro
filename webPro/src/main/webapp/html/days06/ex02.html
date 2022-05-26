@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onload="init();">
+
+<h3>ex02.html</h3>
+<!-- autocomplete="on" 사용자가 이전에 입력한 값을 기반으로 자동 완성 속성 -->
+
+<form action="ex02_ok.jsp" method="get" autocomplete="on">
+<!-- 대소문자 1자 특수문자 1자 숫자 1자 입력 유효성 검사 js -->
+비밀번호 : 
+<input type= "password" name="passwd" maxlength="8"
+style="text-align:center;"><br>
+<!-- 브라우저 지원에 따라 색상 선택 X -->
+<input type="color" id="favcolor" name="favcolor">
+<br>
+<input type="date" id="birth" >
+<button type="button" onclick="btn_date()">선택한 날짜 확인</button>
+<script>
+	function btn_date(){
+		// window 객체는 모든 객체의 최상위 부모이고 생략이 가능하다
+		// 모든 input 태그들의 입력값은 value 속성값으로 설정, 가져오기도 한다
+		var birthday = document.getElementById("birth").value;
+		alert(birthday);
+	}
+</script>
+<br>
+설문(투표) 기간 : <!-- 시작 ~ 종료 -->
+<input type="date" min="2022-05-18" max="2022-05-25">
+
+<br>
+<!-- 날짜 + 시간 -->
+<input type="datetime-local" >
+<br>
+<input type="datetime" >
+<br>
+<!-- 서브밋을 하면 자동으로 이메일 유효성 검사를 하더라 -->
+email : <input type="email" >
+<br>
+<!-- 년도와 월만 선택 -->
+<br>
+<input type="month" >
+<br>
+<!-- 
+입력 제한 속성 : [checked], *disabled, [min], [max], [maxlength], pattern, *readonly,
+required, *size, step, [value] 
+-->
+<!-- type 속성을 생략하면 기본 text -->
+<!-- readonly = "readonly" 읽기전용 -->
+<input type="text" value="홍길동" readonly="readonly"><br>
+<!-- size 너비(width) -->
+<input type="text" value="홍길동" size="50"><br>
+<input type="text" value="홍길동" disabled="disabled"><br>
+
+휴대폰 번호 :
+<input type="tel" pattern="[0-9]{3}-\d{4}-\d{4}"><br>
+
+deptno : 
+<!-- 10/20/30/40 10씩 증가 ~ 90 -->
+<input type="number" min="10" max="90" step="10" value="30">
+<br>
+
+볼륨 조절 :
+<!-- 0 ~ 100 입력 범위 -->
+<!-- onchange 이벤트는 value 속성값이 change 변경될 때 일어나는 이벤트 -->
+<!-- oninput 이벤트는 슬라이더 변경(움직일)할 때 마다 일어나는 이벤트 -->
+<input type="range" id="volumn" name="volumn" min="0" max="100" 
+value="10" oninput="volumn_change()">
+<!-- onchange="volumn_change()" -->
+
+<div id="demo"></div>
+<br>
+<!-- 검색 필드 -->
+<input type="search">
+<br>
+<input type="url">
+<br>
+<!-- 년도와 주 선택 -->
+<input type="week">
+<br>
+<input type="text" pattetn="\d{5}|\d{3}-[0-9]{3}">
+<br>
+<input type="time">
+<br>
+<input type="submit">
+<!--
+<input type="image" src="../images/SiSt.ico" >
+<img src="../images/SiSt.ico" alt="" />
+-->
+</form>
+
+<script>
+	function init(){
+		//alert("로딩~")
+		var v = document.getElementById("volumn");
+		var d = document.getElementById("demo");
+		
+		d.innerText = "value : " + v.value;
+	}
+	
+	function volumn_change(){
+		var v = document.getElementById("volumn");
+		var d = document.getElementById("demo");
+		
+		d.innerText = "value : " +  v.value;
+	}
+	
+</script>
+
+
+</body>
+</html>

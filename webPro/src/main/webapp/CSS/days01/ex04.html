@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	
+	p.second{
+		background-color: aqua;
+	}
+	
+	.second{
+		background-color: gray;
+	}
+	
+	p{
+		background-color: red;
+	}
+	
+	
+	
+	
+	p{
+		background-color: green;
+	}
+	/* 점수처리 */
+	/* 태그명.클래스명 > 클래스명 > 태그명 우선순위 높다 */
+</style>
+<style>
+	/* 태그명.아이디명 > 아이디명 > 태그명 */
+	div#box3{
+		background-color: olive;
+	}
+	
+	/* 요소	속성 X, 우선 순위 X  */
+	#box3{
+		background-color: lime;
+	}
+</style>
+<link rel="stylesheet" href="ex04_style.css" >
+</head>
+<body>
+
+<h3>ex04.html/ex04_style.css</h3>
+
+<p>Lorem.</p>
+<p class="second">Rerum.</p>
+<p>Voluptates.</p>
+
+<div>Lorem.</div>
+<div class="second">Voluptates.</div>
+<div id="box3">Eos.</div>
+
+</body>
+</html>

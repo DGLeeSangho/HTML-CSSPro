@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+
+	/* 모든 p 요소 
+	p{
+		background-color: yellow;
+		border:1px solid red;
+	}
+	*/
+	
+	/* 첫 번째 자식이 p{} */
+	/* p:first-child{ */
+	
+	/* first-of-type 의사 클래스 */
+	p:first-of-type, p:last-child, p:last-of-type{
+		background-color: yellow;
+		border:1px solid red;
+	}
+	
+	/* p:nth-child(7){ */
+	
+	p:nth-of-type(3){
+		background-color: red;
+	}
+	/*  
+	시험 0524
+	
+	:의사 클래스 요소의 특정 상황(태)
+	:first-child
+	:last-child
+	:nth-child(n)
+	:nth-child(even), :nth-child(odd)
+	
+	:first-of-type
+	:last-of-type
+	:nth-of-type(n)
+	 */
+	
+	/* 어떤 요소의 첫 번째 자식 태그가 p인 태그 안에 있는 모든 i 태그 */
+	p:first-child i {
+	}
+	
+	p i:first-child{
+	}
+	
+</style>
+</head>
+<body>
+<h3>ex08_04.html -   :first-child, :last-child 정확한 의미 ? </h3>
+<hr>
+<h3>ex08_04.html -   :first-child, :last-child 정확한 의미 ? </h3>
+<h3>ex08_04.html -   :first-child, :last-child 정확한 의미 ? </h3>
+<h3>ex08_04.html -   :first-child, :last-child 정확한 의미 ? </h3>
+
+<!-- p*7>{$. }+lorem5 -->
+<p>1. Lorem ipsum dolor sit amet.</p>
+<p>2. Nihil incidunt veritatis accusantium illum!</p>
+<p>3. Dicta perferendis ipsum tempore? Inventore.</p>
+<p>4. Mollitia est porro omnis fuga!</p>
+<p>5. Placeat vel ut quisquam quasi.</p>
+<p>6. Excepturi ex necessitatibus natus iusto.</p>
+<p>7. Quisquam officia ducimus velit illum.</p>
+
+<script>
+
+</script>
+
+</body>
+</html>

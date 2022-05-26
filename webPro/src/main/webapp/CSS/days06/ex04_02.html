@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	p.test1{
+		writing-mode:horizontal-tb;		/* 가로 쓰기 모드 */
+	}
+	p.test2>span{
+		writing-mode:vertical-rl; 			/* 세로 쓰기 모드 */
+	}
+	p.test3{
+		writing-mode:vertical-rl;
+	}
+</style>
+</head>
+<body>
+
+<pre>
+writing-mode 		쓰기모드
+</pre>
+
+<p class="test1">Lorem ipsum dolor sit amet.</p>
+<p class="test2">Ipsam <span>perspiciatis</span> unde architecto quasi?</p>
+<p class="test3">Dolorem nemo laboriosam id minus?</p>
+
+</body>
+</html>

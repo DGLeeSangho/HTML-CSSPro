@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+/* 	
+	a{}
+	a:hover{} 
+*/
+
+	/* 링크 태그의 상태 4가지 종류 : (주의) 순서 지키자 */
+	a:link{	/* 방문하지 않은 링크 */
+		color:black;
+		text-decoration:none;
+	}
+	a:visited { /* 방문한 링크 */
+		color:green;
+	}
+	a:hover { /* 마우스를 링크에 올려놓을 때 */
+		color:hotpink;
+		/* 텍스트 장식 */
+		/* text-decoration:underline overline line-through */
+		
+		/* 텍스트 변환 */
+		/* text-transform: uppercase; */
+		/* text-transform: lowercase; */
+		
+		/* 각 단어의 첫 글자만 대문자로 변환 */
+		text-transform: capitalize;
+	}
+	a:active { /* 링크를 클릭할 때 */
+		color:blue;
+	}
+	
+</style>
+</head>
+<body>
+
+<h1>텍스트 장식 : text decoration 속성 + 텍스트 변환</h1>
+
+<a href="#">naver</a><br>
+<a href="#">daum</a><br>
+<a href="#">sist</a><br>
+
+<h3 style="letter-spacing:5px;">ex09_02.html - 텍스트 간격</h3>
+<h3>ex09_02.html - 텍스트 간격</h3>
+<h3 style="letter-spacing:-3px;">ex09_02.html - 텍스트 간격</h3>
+
+<pre>
+1. text-indent 속성 : 첫 번째 라인(줄)에 들여쓰기
+2. letter-spacing 속성 : 텍스트에서 문자와 문자 사이의 간격(공백)을 지정.
+3. line-height 속성 : 라인과 라인 사이의 간격(공백)
+4. word-spacing 속성 : 단어와 단어 사이의 간격
+5. white-space(공백) 속성 : ex09_03.html
+
+6. word-break 속성 : ex09_03.html 복사-> ex09_05.html
+7. word-wrap 속성
+</pre>
+
+<p style="word-spacing:-10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos commodi.</p>
+<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos commodi.</p>
+<p style="word-spacing:-3px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos commodi.</p>
+
+<p style="text-indent:50px; line-height:1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+Id asperiores esse suscipit doloremque officia nemo adipisci impedit quia dolores eos.
+Veniam laudantium quos dolorem vitae laborum cumque ipsa quo similique!
+</p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+#grad1 {
+	width: 200px;
+	height: 200px;
+	/* background-color:red; */
+	/* background-image:linear-gradient( 그라데이션 방향, 최소한 두 개의 색상 지정) */
+	/* 
+      background-image:linear-gradient(45deg, rgba(255,0,0,0.5), yellow,blue);
+   	*/
+
+	/* background-image: radial-gradient(모양 크기, 색상, 색상 ..); */
+	/* 중심으로 부터 부드러운 전환 */				/* 간격 */
+	background-image: radial-gradient(circle, red 5%, green 15%, blue 60%);
+}
+</style>
+</head>
+<body>
+<h3>css 그라디언트(gradient) 효과 - 변화도, 경사도( 도로, 철도의 )</h3>
+
+<pre>
+지정된 색상 간에 부드러운 전환 ( 빨강 -> 노랑 )
+방향 : top -> bottom ( to bottom ) - 기본값, to right, to left, to top 또는 각도
+1. 선형 그라데이션
+2. 방사형 그레데이션
+3. 원추형 그라데이션
+</pre>
+
+
+	<div id="grad1"></div>
+</body>
+</html>

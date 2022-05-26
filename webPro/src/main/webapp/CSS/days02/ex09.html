@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	body{
+	/* 1. 텍스트 색상 */
+		color : blue;
+	}
+	h3{
+		color:green;
+		/* text-align:center; */
+		
+		/* 
+		justify
+		사전적의미 : 타당성을 보여주다
+						정당화 시키디
+						해명하다
+						*** 인쇄되는 텍스트의 행의 끝을 나란히 맞추다 
+		*/
+		text-align:justify;
+	}
+	
+	p#p1{
+		border:1px solid gray;
+		/* text-align:justify; */
+		
+		/* 텍스트의 마지막 줄을 정렬 */
+		text-align-last:right;
+	}
+	
+	div{
+		/* 텍스트 방향 변경 */
+		direction:rtl;
+		unicode-bidi: bidi-override;
+	}
+	
+</style>
+<style>
+	img.a{vertical-align:baseline;} /* 기본값 */
+	img.b{vertical-align:text-top;}
+	img.c{vertical-align:text-bottom;}
+	img.d{vertical-align:sub;}
+	img.e{vertical-align:super;}
+</style>
+</head>
+<body>
+<h3>ex09.html - 텍스트(text)</h3>
+
+<div>Lorem ipsum dolor sit amet.</div>
+
+<p id="p1">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Id obcaecati omnis repudiandae commodi ducimus quasi. 
+Facere veniam vero laudantium velit consectetur repellendus 
+repudiandae debitis alias dolorem voluptatum assumenda et ipsa.
+</p>
+
+<!-- p*5>lorem5 -->
+<p>Lorem <img src="../images/sqpurple.gif" class="a" style="width:9px; height:9px;"> ipsum dolor sit amet.</p>
+<p>Totam <img src="../images/sqpurple.gif" class="b" style="width:9px; height:9px;">ab doloremque nam mollitia!</p>
+<p>Deleniti <img src="../images/sqpurple.gif" class="c" style="width:9px; height:9px;">quo maxime quas labore.</p>
+<p>Aspernatur<img src="../images/sqpurple.gif" class="d" style="width:9px; height:9px;"> autem natus voluptate similique!</p>
+<p>Alias <img src="../images/sqpurple.gif" class="e" style="width:9px; height:9px;">maxime ut facilis debitis.</p>
+
+
+
+</body>
+</html>

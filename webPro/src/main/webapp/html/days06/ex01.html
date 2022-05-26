@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<h3>days06/ex01.html</h3>
+
+1. form 역할
+2. action 속성 이해
+3. method="get"
+					queryString
+	ex01_ok.jsp?이름=값&name속성값=값
+	url 길이 제한 (2048자)
+	보안 취약
+	기본값
+	
+	method="post"
+	http 내부 저장 전송 - 보안 안정적
+	크기 제한 X ( 파일 업로드 )
+	
+<!-- 
+http://localhost/webPro/html/days06/ex01_ok.jsp
+?
+-->
+
+<form id="form1" action="ex01_ok.jsp" method="get">
+<label for="name">name</label> : 
+<input type="text" id="name" name="name" value="admin"><br>
+<label for="age">age</label> : 
+<!-- required="required" 필수 입력 사항 -->
+<input type="text" id="age" name="age" required="required"><br>
+<input type="submit" >
+
+<!-- submit 입력값을 서버에 제출하다 -->
+<!-- <input type="submit"> -->
+<!-- <button type="submit">제출</button> -->
+
+<!-- 서버 제출하라 submit 기능 X 일반 버튼 + 사용자 반응 처리( js ) -->
+<input type="button" value="제출" onclick="send()">
+<input type="reset" value="리셋">
+</form>
+
+<script>
+	function send(){
+		//alert("이벤트 발생 체크 후 코딩 ~")
+		var f1 = document.getElementById("form1")
+		// js   submit() 함수
+		
+		// [입력값에 대한 유효셩 검사]
+		// 이름, 나이 필수 입력 항목 체크 후 서브밋
+		f1.submit()
+	}
+	
+</script>
+
+<form action="ex01_ok_02.jsp">
+<!-- 여러개의 항목 중에 하나를 선택할 때 select 태그 사용 -->
+<!-- option의 value 속성값을 설정하지 않으면 text 값으로 자동 설정된다 -->
+<!-- multiple="multiple" 다중 선택 가능 -->
+<!-- http://localhost/webPro/html/days06/ex01_ok_02.jsp
+?
+cars=BMW
+&
+cars=Kia
+&
+cars=Volvo
+&
+cars=Audi
+-->
+소유한 자동차를 선택하세요.
+<br>
+<select name="cars" id="cars" multiple="multiple">
+	<option value="BMW">BMW</option>
+	<option selected="selected">Kia</option>
+	<option>Volvo</option>
+	<option>Audi</option>
+</select>
+<br>
+<!-- 
+10   ACCOUNTING   NEW YORK
+20   RESEARCH   DALLAS
+30   SALES   CHICAGO
+40   OPERATIONS   BOSTON 
+-->
+<!-- http://localhost/webPro/html/days06/ex01_ok_02.jsp?cars=BMW
+&
+deptno=10 
+-->
+부서를 선택하세요.
+<br>
+<select name="deptno" id="deptno">
+	<option value="10">ACCOUNTING </option>
+	<option value="20">RESEARCH</option>
+	<option value="30" selected="selected">SALES</option>
+	<option value="40">OPERATIONS</option>
+</select>
+<br>
+하고 싶은 말 :
+<!-- <input type="text" name="content"> -->
+<!-- 여러 라인의 내용 입력 -->
+<!-- 10 줄 40자 -->
+<textarea name="content" rows="10" cols="40" ></textarea>
+<!-- input 태그여야 value 속성이 있다 -->
+<br>
+<!-- id 속성은 그 요소의 고유한 이름 -->
+<!-- name 속성은 서브밋(제출) -->
+<!-- 성별 남자/여자 라디오버튼을 하나의 그룹으로 묶어주는 역할 : name 속성이다 -->
+<!-- ?gender=f -->
+성별 :
+<input type="radio" id="gm" name="gender" checked="checked" value="m"><label for="gm">남자</label>
+<input type="radio" id="gw" name="gender" value="w"><label for="gw">여자</label>
+<br>
+좋아하는 과목을 모두 선택하세요 ?
+<br>
+<input type="checkbox" name="subject" value="kor" checked="checked">국어
+<input type="checkbox" name="subject" value="eng">영어
+<input type="checkbox" name="subject" value="mat" checked="checked">수학
+<input type="checkbox" name="subject" value="pe">체육
+<br>
+
+<!-- 
+첨부한 파일을 선택할 뿐이지 서버 파일이 업로드되지는 않는다.
+파일 업로드 라이브러리 설치 + 구현
+-->
+첨부 파일 : <input type="file" name="attachFile" multiple="multiple"><br>
+<!-- 
+첨부 파일 : <input type="file" name="attachFile"> <br>
+첨부 파일 : <input type="file" name="attachFile"> <br>
+ -->
+
+
+<br>
+<input type="submit">
+</form>
+
+</body>
+</html>

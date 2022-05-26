@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<style>
+span{
+	border:1px solid gray;
+}
+</style>
+</head>
+<body>
+
+<h3>ex07_03.html</h3>
+
+<hr>
+<button onclick="span_hide()">숨기기(hide)</button>
+<button onclick="span_show()">보이기(show)</button>
+<script>
+	// [주의] js는 대소문자 구분한다.
+
+	function span_hide(){
+		//document.getElementById("box01").style.display="none"
+		// var 키워드 : 변수 선언 시 사용하는 키워드
+		var spans = document.getElementsByTagName("span");
+		//alert(spans.length);
+		for (var i = 0; i < spans.length; i++) {
+			spans[i].style.display="none"
+		} // for
+	}
+	
+	function span_show(){
+		//document.getElementById("box01").style.display="inline"
+		var spans = document.getElementsByTagName("span");
+		for (var i = 0; i < spans.length; i++) {
+			spans[i].style.display="inline"
+		} // for
+	}
+</script>
+<br><br>
+
+<!-- <div id="box01"> -->
+<span>함세강</span>
+<span>안시은</span>
+<span>김서영</span>
+<span>박재영</span>
+<span>김지민</span>
+<span>박민주</span>
+<span>이동원</span>
+<!-- </div> -->
+
+</body>
+</html>

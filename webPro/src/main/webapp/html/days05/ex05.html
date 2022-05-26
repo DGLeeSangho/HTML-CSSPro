@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>seonghan 2022. 5. 18. - 오전 11:37:05</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+</head>
+<body>
+
+
+
+<!-- 복습 문제 5-5번 풀이) -->	
+<p>Click <a href="">here</a> to continue</p>
+
+
+<!-- 텍스트 : {} -->
+
+<!-- p>{Click here to continue} -->
+<p>Click here to continue</p>
+<!-- a[href]>{here} -->
+<a href="">here</a>
+
+<!-- X -->
+<!-- p>{Click }+a[href]>{here}+{ to continue} -->
+<p>Click <a href="">here to continue</a></p>
+
+
+<!-- p>{Click }+a[href]>{here}^{ to continue} -->
+<p>Click <a href="">here</a> to continue</p>
+
+<!-- p>{Click }+(a[href]>{here})+{ to continue} -->
+<p>Click <a href="">here</a> to continue</p>
+
+</body>
+</html>

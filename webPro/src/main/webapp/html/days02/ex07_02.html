@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>pre 요소</h3>
+1. [pre]formatted text<br>
+
+<pre>
+
+package days29;
+
+import javax.swing.JOptionPane;
+
+/**
+ * @author Yoo
+ * @date 2022. 3. 30. - 오후 3:53:09
+ * @subject
+ * @content
+ */
+public class Ex11_02 {
+
+	public static void main(String[] args) {
+		
+		
+		ThreadWorker02 t = new ThreadWorker02();
+		t.start();
+
+		String inputData = JOptionPane.showInputDialog("아무 값이나 입력하시오");
+		System.out.println(inputData);
+		t.interrupt();	//Interrupted 상태 false -> true
+		System.out.println(t.isInterrupted());	// true
+		
+		System.out.println("main END");
+		
+	}
+
+}
+
+class ThreadWorker02 extends Thread {
+
+	@Override
+	public void run() {
+		int k = 10;
+		// isInterrupted() : Interrupted 상태를 반환하는 메서드 true/false
+		while (k != 0 && !isInterrupted()) {	//!false true
+			System.out.println("-" + isInterrupted());
+			// this.sleep(1000); 실행스레드 -> 일시정지
+			try {
+				this.sleep(1000); // RUNNABLE 상태 -> 일시정지 (1초동안)
+			} catch (InterruptedException e) {
+				//e.printStackTrace();
+				// 자동으로 interrupted 상태 = false 초기화
+				this.interrupt(); // false -> true 변경 추가
+			}
+
+		}
+		System.out.println(" t 스레드의 작업은 중지");
+
+	}
+
+}
+</pre>
+
+</body>
+</html>

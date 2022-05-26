@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	div{
+		width:300px;
+		height:100px;
+		background-color: yellow;
+		border:1px solid black;
+	}
+	#demo{
+		/* transform:rotateX(45deg); */
+	}
+</style>
+</head>
+<body>
+
+
+<h3>css 3D 변환 - transform 속성</h3>
+
+<button>회전</button>
+
+<pre>
+2. 요소 이동 
+	translateX(), translateY(), translateZ() 	translate3d(x,y,z)
+1. 요소 회전
+	rotateX(),rotateY(),rotateZ(),            		rotate3d(x,y,z)
+3. 요소 크기
+	scaleX(), scaleY(), scaleZ(),			  		scale3d(x,y,z)
+	
+4. matrix3d()
+</pre>
+
+<div>Lorem ipsum dolor sit amet.</div>
+<div id="demo">Lorem ipsum dolor sit amet.</div>
+
+<script>
+	var angle = 1;
+	var timer;
+	document.querySelector("button:first-of-type").onclick = function(){
+		timer = setInterval(div_rotate,10);
+	}
+
+	function div_rotate(){
+		var target = document.querySelector("#demo")
+		 
+		target.style.transform = "rotateX("+angle+"deg)"
+		/*
+		target.style.transform = "rotateY("+angle+"deg)"
+		target.style.transform = "rotateZ("+angle+"deg)"
+		*/
+		angle += 1
+	}
+</script>
+</body>
+</html>

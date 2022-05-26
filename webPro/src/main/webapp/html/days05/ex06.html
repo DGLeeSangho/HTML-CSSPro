@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>seonghan 2022. 5. 18. - 오전 11:44:40</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	*{	/* 모든 태그 */
+		box-sizing: border-box;		/* 너비 - 패딩,마진,보더+ width이기 때문에 %(30%,70%)가 달라진다 그래서 그걸 맞추는 속성*/
+	}											/* css 수업할 때 저세히 설명  */
+	
+	body{
+		font-family: Aria, Helvetica, sans-serif;	/* 글꼴 나열 - 첫번째 글꼴 없으면 다음거 적용..  */
+	}
+	
+	#header{
+	/* div#header{ */  /* 같지만 차이점이 있다 */
+		background-color: #666;
+		color: white;
+		padding: 30px;
+		text-align: center;
+		font-size: 35px;
+	}
+	
+	#footer{
+		background-color: #777;
+		color: white;
+		padding: 15px;
+		text-align: center;
+		font-size: 25px;
+	}
+</style>
+<style>
+	#nav{
+		background-color: #ccc;
+		height: 300px;
+		width: 30%;
+		padding: 20px;
+		
+		float: left;
+	}
+	
+	#nav ul{
+		/* background-color: red; */
+		list-style-type: none;
+		padding: 0;
+	}
+	
+	#article{
+		background-color: #f1f1f1;
+		min-height: 300px;
+		width: 70%;
+		padding: 20px;
+		
+		float: left;
+	}
+	
+	#section:after{		/* section이후에 float속성 없애려고 */
+		content:"";
+		display: table;
+		clear: both;
+	}
+</style>
+</head>
+<body>
+
+<h2>div(배치,layout) + css</h2>
+
+<!-- p*2>lorem -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam odit optio illum ab voluptate consectetur necessitatibus voluptatum deleniti. Reprehenderit dolor incidunt ipsam a explicabo nihil inventore accusamus mollitia eos soluta.</p>
+<p>Libero maiores dolores aspernatur fuga mollitia ipsum ad dolore quia error neque ducimus incidunt consectetur enim sunt repellendus odio veritatis laudantium quae deleniti voluptas laboriosam quas voluptate. Eius id doloribus.</p>
+
+<!-- #header>h2>{Cites} -->
+<div id="header">
+	<h2>Cites</h2>
+</div><!-- header -->
+
+<!-- #section>(#nav>ul>li*3>a[href='#'])+#article>(h1>{London}^p*2>lorem)*3 -->
+<div id="section">
+	<div id="nav">
+		<ul>
+			<li><a href="#">London</a></li>
+			<li><a href="#">Paris</a></li>
+			<li><a href="#">Seoul</a></li>
+		</ul>
+	</div><!-- nav -->
+	<div id="article">
+		<h1>London</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus eos quibusdam quae error iure ab consequatur quis atque hic minus asperiores obcaecati fuga ducimus possimus cum qui consequuntur laboriosam tenetur!</p>
+		<p>Atque amet sunt omnis quo soluta vitae consequatur dignissimos voluptas quisquam. Ab perspiciatis odio ex laborum nostrum harum deleniti soluta eos fuga ipsa! Facilis rem nobis quae iure unde nam!</p>
+		<h1>Paris</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam inventore repellendus totam harum neque illum aspernatur nisi iure aut asperiores quaerat ea non nesciunt dolor ratione voluptatem. Minima accusantium.</p>
+		<p>Laborum obcaecati eum nesciunt similique iste nam eos corrupti pariatur recusandae voluptatem vitae deserunt ducimus veritatis quasi repellendus eveniet et sunt modi officia laboriosam reprehenderit cupiditate autem doloribus. Deleniti consequatur.</p>
+		<h1>Seoul</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium culpa quisquam dolores reiciendis fugit et nulla molestiae sunt rem molestias temporibus eum accusantium in architecto porro dolore alias. Quo doloribus!</p>
+		<p>Nostrum perspiciatis autem iste magnam officia ipsa ullam delectus? Iusto cumque quos veniam nihil ipsum aspernatur rem est accusamus ad dolore. Nesciunt laboriosam rerum. Animi aperiam iure quam aspernatur voluptatem!</p>
+	</div><!-- article -->
+</div><!-- section -->
+
+<!-- footer 까지 float가 적용되어서 없애려고, float속성 끊는 객체 만듬 -->
+<!-- <div style="clear:both"></div> -->
+<!-- 이제는 css가서 처리 -->
+
+<!-- #footer>h2>{Footer} -->
+<div id="footer">
+	<h2>Footer</h2>
+</div><!-- footer -->
+
+
+</body>
+</html>

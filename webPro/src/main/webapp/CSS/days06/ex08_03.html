@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	div{
+		width:100px;
+		height:100px;
+		background-color: red;
+		text-align: center;
+		
+		/* 부드럽게 전환 + 부드럽게 회전변환 */
+		transition:width 2s ease, height 2s ease, transform 2s;
+	}
+	/* : 의사 클래스 - 요소의 특정 상태 */
+	div:hover{
+		width:300px;
+		height:300px;
+		
+		transform:rotate(180deg);
+	}
+</style>
+</head>
+<body>
+
+<h3>ex08_03.html - 전환( transition ) + 변환(transform:이동,회전,크기,기울기)</h3>
+
+<div>box</div>
+
+</body>
+</html>

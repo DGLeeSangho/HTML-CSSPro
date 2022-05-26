@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	div{
+		width:300px;
+		height:50px;
+		background-color: yellow;
+		border:1px solid black;
+		
+		/* 1. 요소 이동 */
+		/* 
+		transform:translate(50px,100px);
+		-ms-transform:translate(50px,100px);
+		*/
+		/* 2. 요소 회전 */
+		/* 
+		transform:rotate(-20deg);
+		-ms-transform:rotate(-20deg);
+		 */
+	}
+</style>
+</head>
+<body>
+<h3>ex06 - css 2D 변환(transform 속성)</h3>
+<input type="radio" name="direction" value="plus" checked="checked">시계 방항
+<input type="radio" name="direction" value="minus">반시계 방항
+<br>
+<button class="on">회전</button><button class="stop">멈춤</button>
+<pre>
+1. 요소이동 - translate()
+2. 요소회전 - rotate()
+
+3. 요소 크기 조정 - 너비 높이 scale(), scaleX(), scaleY()
+4. 기울기 - skew(), skewX(), skewY()
+
+5. 이동/회전/크기/기울기 - matrix()
+</pre>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Cumque similique.
+</div>
+
+<script>
+	var angle = 1;
+	var timer;
+	/* jquery 클릭 이벤트 1번 발생하도록 처리하는 메서드   one() */
+	document.querySelector(".on").onclick = function(){
+		// 일정한 시간 간격으로 반복적으로 실행
+		// setTimeout();
+		// setInterval  리턴값 이해
+		timer = setInterval(div_rotate,10);
+		/* alert(timer) */
+		
+		this.disabled = "ture"
+	}
+	document.querySelector(".stop").onclick = function(){
+		/* alert(timer) */
+		clearInterval(timer)
+	}
+	function div_rotate(){
+		var target = document.querySelector("div")
+		//alert(target) //[object HTMLDivElement]
+		target.style.transform = "rotate("+angle+"deg)"
+		angle += 1
+	}
+	
+	/* 
+	document.querySelector("button").onclick = function(){
+		var target = document.querySelector("div")
+		//alert(target) //[object HTMLDivElement]
+		target.style.transform = "rotate("+angle+"deg)"
+		angle += 10
+	}
+	 */
+</script>
+
+
+</body>
+</html>

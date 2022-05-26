@@ -1,0 +1,125 @@
+
+1. 아래 코딩을 한 줄씩 설명을 하세요.
+<style>
+  .sticky{
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+//위치 상단에 붙어서 고정 너비는 100%
+</style>
+<script> // 
+  var navbar = document.getElementById("navbar");  // 요소 ID navbar를 얻어와 navbar로 변수 선언 
+  console.log( navbar.offsetTop );                 //  위쪽 공간의 크기 로그 확인
+  var nbOtop = navbar.offsetTop;                   // 위쪽 공간의 크기
+  window.onscroll = function (){	               //  스크롤 바 움직일 때의 거리
+	  if (  window.pageYOffset  >= nbOtop ) {
+		navbar.classList.add("sticky");
+	} else {
+		navbar.classList.remove("sticky");
+	}
+  };  
+  
+  2. 아래 코딩을 설명하고 틀린 곳은 고치세요.
+  <script>
+  function openNav(){ 
+	  document.getElementById("mySidenav").style.width = 250; 
+	  document.getElementById("main").style.margin-left = 250; 
+	  document.body.style.background-color = "rgba(0,0,0,   0.4)";
+  }	// "" 와 단위 빠짐  margin-left > marginLeft
+   // nav가 오픈되며 너비가 250px만큼 이동 main도 동일 배경은 검정에 투명도 0.4로 변경
+  $("#mySidenav .closebtn").click( function (event){ 
+	   $("#mySidenav").css("width", "0"); 
+	   $(this).parents("div")  .css("width", "0");   
+	  $("body").css("background-color", "white");
+  } );
+  //클로즈버튼 누를 시 제자리로 돌아오게 하는 코딩
+</script>
+
+3. 이미지 스프라이트( image sprites )의 개념과 아래 코딩에 대해서 설명하세요 . 
+
+    li#prev:hover{
+    background: url('../images/img_navsprites_hover.gif')-47px   -45px;
+   }
+  
+4.  css 속성 선택자 설명
+  ㄱ. a[title]		a태그의 제목
+  ㄴ. a[title='flower'] a태그의 제목이 flower 인것
+  ㄷ. a[title*='flower']  a태그의 제목에 flower라는 단어가 포함된것 %flower%
+  ㄹ. a[title^='flower'] a태그의 제목에 flower라는 단어로 시작되는 것
+  ㅁ. a[title$='flower'] a태그의 제목에 flower라는 단어로 끝나는 것
+  ㅂ. a[title~='flower'] a태그의 제목에 'flower'라는 단어가 독립적으로 존재하는 것 
+  							ex) flower O _ flower O  flowers X  _flower X   
+  
+5-1. 특이성 수준을 나타내는 점수( [    ] )를 적으세요
+  1.  인라인 css 적용 :   [    ] 점  ( 인라인 스타일 적용 방식이 항상 가장 우선순위가 높다. )
+     <h1  style="color:red" ></h1>
+  2.  id 속성             :   [  100  ] 점
+  3. 태그명, 의사요소                          :  [  1  ]점
+  4. 클래스명, 의사클래스, 속성 선택자 :  [  10  ]점
+  5. *               :   [  0  ]점        
+    
+5-2.   css 코딩의 특이성 수준을 점수로 나타내세요 
+
+<style>
+   a{  1  } 
+   p>a{  2 } 
+  div > p > a {  3 } 
+  #mydiv p a { 102 } 
+   div.#mydiv p a { 103  } 
+  a{     color:yellow !important;   } 10000
+</style>
+
+6.   막대그래프를 그리는 ㄱ, ㄴ 부분의 css 코딩을 하세요.
+<style>
+.bar-container{
+   [ ㄱ. css 코딩하세요  ] 
+  		width:100%;
+		background-color: red;
+		text-align: center;
+		color:white;
+  }
+  .bar-1 {
+    [ ㄴ. css 코딩하세요 ] 
+    	background-color: yellow;
+		height:18px;
+		width:20%;
+  }
+</style> 
+
+   	<div class="bar-container">   
+   		<div class="bar-1"></div>
+   	</div> 
+   	
+7.    js 코딩( ㄱ, ㄴ, ㄷ, ㄹ)을 설명하세요. 
+<span  onclick="chip_close()">&times;</span> 
+<script>
+   function chip_close(spn){
+	   
+	   ㄱ. this.style.display = "none";
+    	현재 요소의 디스플레이 none
+	   ㄴ. spn.style.display = "none";
+	   span 의 chip_close() 함수로 인해 디스플레이 none
+	   ㄷ. event.srcElement.style.display = "none";
+	   event 발생 시 요소의 디스플레이 none
+    	ㄹ. event.srcElement.parentElement.style.display = "none";
+	   부모요소까지 디스플레이 none
+   }
+    
+    // [문제] jquery 변경
+    $(".closebtn").click(function(event){
+		$(".chip").css("display","none")
+	});
+</script>
+
+8-1. css 코딩을 설명하세요 
+#demo{  
+   background: url('../images/img_flwr.gif')  no-repeat right bottom ,  url('../images/paper.gif')  repeat  left top;
+   }
+   배경이미지 우측 하단에 반복되지않는 꽃이미지 , 좌측상단 반복되는 페이퍼 이미지
+   다중 배경 이미지
+8-2.  css 코딩을 설명하세요 
+#demo1{
+     background-size:  100px 80px;   
+  }   
+  배경이미지의 크기를 너비 100 높이 80 픽셀로 지정한다

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>html 링크(link) - a 태그</h3>
+1. 모든 웹 페이지에서 찾을 수 있다.<br>
+2. 링크를 클릭하면 다른 문서로 이동할 수 있다.<br>
+3. 링크 위로 마우스를 이동하면 마우스 화살표가 작은 손 모양으로 바뀐다.<br>
+4. 링크는 텍스트, 이미지 또는 기타 html 요소가 될 수 있다.<br>
+5. html링크는 하이퍼링크 <br>
+6. 가장 중요한 속성 - href 속성( 이동할 목적지 주소 (url ) )<br>
+7. naver - 보라삭 : 방문한 링크<br>
+	daum - 파랑색 : 방문하지 않은 링크<br>
+				빨강색 : 활성(active) 링크<br>
+8. target 속성 - 어디에서 링크된 문서를 열지를 결정하는 속성(대상)<br>
+	_self( 기본값 )		자기자신 창<br>
+	_blank				새창, 새탭<br>
+	_parent				부모(상위) 프레임<br>
+	_top					창의 전체 본문<br>
+	타켓명<br>
+<hr>
+
+<!-- 
+A link if the [href attribute] is present, 
+and the target for a link if the [name attribute] is present 
+-->
+<a href="http://www.naver.com" target="_self">naver</a> <br>
+<a href="http://www.daum.net" target="_blank">daum</a> <br>
+<a href="http://www.sist.co.kr" >sist </a><br>
+
+<!-- http://localhost/webPro/html/days02/ex11.html -->
+
+<h3>절대주소, 상대주소</h3>
+1. URL( Uniform Resource Locators )<br>
+2. 웹에서 문서의 주소를 지정하는데 사용<br>
+3. 웹서버에 URL을 사용해서 요청한 자원(웹페이지)을 응답<br>
+4. URL 구성<br>
+	ㄱ. 통신규약(프로토콜)	-- 인터넷 서비스 유형<br>
+	http://<br>
+	https://<br>
+	ftp://<br>
+	file://<br>
+	등등<br>'
+	
+	ㄴ. <br>
+		ipaddress<br>
+		localhost<br>
+		127.0.0.1<br>
+		192.168.35.231<br>
+		www. 접두사<br>
+		도메인명 naver.com<br>
+		
+	ㄷ. 포트(port)<br>
+		http:// 기본 포트값 : 80 생략<br>
+		
+	ㄹ. /webPro<br> 
+		이클립스로 웹프로젝트를 생성하면 그 프로젝트명( webPro )이 구분하는 경로명 - context Root<br>
+	
+	ㅁ. 파일명(리소스명) ex11.html<br>
+	
+	ㅂ. QueryString ( 쿼리 스트링 )<br>
+		?where=....&test????<br>
+		http://localhost/webPro/html/days02/ex11.html?where=.....&test????<br>
+		
+		물리적으로는 [context directory] /src/main/webapp/html/days02/<br>
+
+**** URL은 인코딩 (ASCII 문자셋)을 사용하기 때문에<br>
+한글 문자 =>    %16진수값으로 변환해서 URL 사용된다.<br>
+공백		=>   + 기호 또는 %20 변환<br>
+
+[URL]<br>
+https://<br>
+www.<br>
+google.co.kr<br>
+/search<br>
+쿼리 스트링<br>
+?<br>
+q=%ED%99%8D%EA%B8%B8%EB%8F%99<br>
+&<br>
+oq=%ED%99%8D%EA%B8%B8%EB%8F%99<br>
+&<br>
+aqs=chrome..69i57j46i131i433i512l2j0i512l4j46i512j0i512j46i512.1320j0j15<br>
+&<br>
+sourceid=chrome<br>
+&<br>
+ie=UTF-8		<br>
+
+
+http://www.naver.com:80/<br>
+
+<!-- 현재 페이지와 다른 폴더(경로)에 있는 ex01.html 파일 -->
+<!-- 웹은 경로 구분자 / -->
+<!-- 절대경로 -->
+<a href="http://localhost/webPro/html/days01/ex01.html">days01.ex01.html</a><br>
+<!-- 현재 페이지와 같은 폴더(경로)에 있는 ex01.html 파일 -->
+<a href="http://localhost/webPro/html/days02/ex02.html">days02.ex02.html</a><br>
+
+<hr>
+<!-- 상대경로 -->
+<!-- 상대경로의 기준 : http://localhost/webPro/html/days02/ex11.html -->
+
+http:/localhost/webPro/html<br>
+
+<a href="../days01/ex01.html">days01.ex01.html</a><br>
+<a href="ex02.html">days02.ex02.html</a><br>
+
+<hr>
+
+<!-- 절대경로 -->
+<a href ="http://localhost/webPro/index.html">index.html</a><br>
+<!-- 상대경로 -->
+<a href="../../index.html">index.html</a><br>
+<!-- 무료 도메인 -->
+<a href="http://localhost/webPro">index.html</a><br>
+<a href="http://localhost">index.html X </a><br>
+http://localhost/webPro/<br>
+
+
+</body>
+</html>

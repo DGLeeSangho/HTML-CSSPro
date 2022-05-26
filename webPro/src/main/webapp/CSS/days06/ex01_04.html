@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	div{
+		border:10px dotted black;
+		padding:35px;
+		background: yellow url('../images/img_flwr.gif') no-repeat
+	}
+	#demo1{
+		background-origin: padding-box;   /* 기본값 */
+		background-clip: padding-box;
+	}
+	#demo2{
+		background-origin: border-box;
+		background-clip: border-box;		/* 기본값 */
+	}
+	#demo3{
+		background-origin: content-box;
+		background-clip: content-box;
+	}
+</style>
+</head>
+<body>
+<h3>ex01_04.html - background-origin 속성</h3>
+
+<pre>
+ - background-position 배경 이미지의 위치를 지정하는 속성 left top, center middle
+ - background-origin    배경 이미지의 위치를 지정하는 속성
+   두 가지 위치 지정 속성의 차이점 ? 
+   padding-box  패딩   왼쪽상단  (기본값)
+   border-box    테두리   왼쪽상단
+   content-box  콘텐츠   왼쪽상단
+</pre>
+
+<h3>ex01_04.html - background-clip 속성</h3>
+
+<pre>
+[배경색]이 그려질 위치를 지정하는 속성
+
+	padding-box  패딩   왼쪽상단  
+	border-box    테두리   왼쪽상단   (기본값)
+	content-box  콘텐츠   왼쪽상단
+</pre>
+
+<div id="demo1">
+	<h1>Lorem ipsum dolor sit amet.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ullam itaque ducimus quod magni velit?</p>
+</div>
+<p> </p>
+<div id="demo2">
+	<h1>Ratione laborum dolore qui nisi!</h1>
+	<p>Sunt nesciunt esse quidem cupiditate culpa fuga repudiandae quam illo vero ea tempora libero a.</p>
+</div>
+<p> </p>
+<div id="demo3">
+	<h1>Beatae deleniti debitis quibusdam ducimus.</h1>
+	<p>Quasi mollitia hic repudiandae officia omnis incidunt dolore eveniet facere enim similique cupiditate officiis repellat.</p>
+</div>
+
+
+</body>
+</html>

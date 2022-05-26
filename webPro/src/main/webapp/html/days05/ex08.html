@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<mate name="keywords" content="html,css,javascript">
+<mate name="author" content="kenik">
+<!-- 웹 페이지에 대한 설명을 정의 -->
+<mate name="description" content="head 태그 및 자식 태그 설명">
+<!-- 30초 마다 문서 새로 고침 ( 서버 요청/응답 ) -->
+<!-- 
+<meta http-equiv="refresh" content="30">
+-->
+<!-- 웹 페이지가 모든 기기에서 잘 보이도록 표시 영역 설정 -->
+<!-- 뷰포트 : 웹 페이지에서 사용자가 볼 수 있는 영역 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+</style>
+<script>
+	// javascript 정의하는데 사용하는 태그
+</script>
+<base href="http://localhost:8090/webPro/html/" target="_blank">
+</head>
+<body>
+
+<h3>ex08.html</h3>
+
+<pre>
+1. head 태그
+	- 메타데이터의 컨테이너( 데이터에 대한 데이터 )의 컨테이너,
+	- html태그의 자식
+	- 메타데이터 : 문서 제목, 
+
+2. head태그 자식 태그
+	ㄱ. title 태그 : 문서 제목, 브라우저의 제목 표시줄 또는 페이지 탭 표시.
+	ㄴ. style 태그 : html 문서의 스타일 정보 정의
+	ㄷ. link 태그 : 외부 리소스 연결, 외부 css 파일 연결( 자주 사용 )
+	ㄹ. meta 태그 : 
+		1) meta charset = "UTF-8" 웹 문서에 사용된 인코딩( 문자셋 ) 정의
+		2) mate name="keywords" content="간장게장,간장,게장html,css,javascript" 키워드 정의
+				왜 ? 검색엔진에 대한 키워드 정의
+	ㅁ. script 태그 : javascript 정의하는데 사용하는 태그
+	ㅅ. base 태그 : 페이지의 모든 상대 주소에 대한 기본 주소 및 대상을 지정하는 태그
+</pre>
+
+<img alt="커피하우스2" src="/webPro/html/images/coffeehouse2.jpg" width = "200px">
+<br>
+<img alt="커피하우스2" src="../images/coffeehouse2.jpg" width = "200px">
+
+
+</body>
+</html>

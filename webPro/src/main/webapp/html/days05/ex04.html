@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>seonghan 2022. 5. 18. - 오전 10:42:51</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<style>
+	div{
+		background-color: black;
+		color: white;
+		padding: 20px;
+	}
+	
+	p:hover {
+		color: red;
+	}
+	
+</style>
+</head>
+<body>
+
+<!-- 
+무작위로 한글 채워넣기
+http://guny.kr/stuff/klorem/
+ -->
+ 
+ <!-- 복습 문제 4-1번 풀이) -->	
+
+
+<button onclick="div_hide()">숨기기</button>
+<button onclick="div_show()">보이기</button>
+
+<div id="demo">
+	<!-- h2>lorem1 임의의 한 단어 -->
+	<h2>Lorem.</h2>
+	
+	<!-- p*2>lorem -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores consequatur vitae alias consectetur quisquam ratione dolorum sunt asperiores voluptatibus et consequuntur itaque. Neque dolor atque molestias praesentium quos aut.</p>
+	<p>Dolorem fugit eveniet repellendus pariatur quibusdam harum praesentium! Officia a est nihil esse laboriosam eveniet provident atque optio aspernatur at necessitatibus praesentium cumque quos nam rem aut ab. Accusamus fugiat!</p>
+</div>
+
+<script type="text/javascript">
+	function div_hide(){
+		/* 자바스크립트 마지막에 ; 붙이는게 원칙 */
+		//console.log("숨기기 버튼 클릭됨.");		/* 브라우저 F12 > Console 에서 확인 */
+		var demo = document.getElementById("demo");
+		demo.style.display = "none";
+	}
+	
+	function div_show(){
+		var demo = document.getElementById("demo");
+		demo.style.display = "block";
+	}
+</script>
+
+</body>
+</html>

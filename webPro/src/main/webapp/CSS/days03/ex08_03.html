@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	div:last-of-type{
+		/* 스크롤 바 생기게 하기 위해서 */
+		padding-bottom : 2000px;
+		
+	}
+	div.sticky_test{
+		border: 2px solid #4caf50;
+		background-color: #cae8ca;
+		padding:3px;
+		text-align: center;
+		
+		/* 이 div 태그가 스크롤 할 때 top = 0 될 때 */
+		position:sticky;
+		position: -webkit-sticky;   /* Safari */
+		
+		top:0; 
+	}
+</style>
+</head>
+<body>
+<h3>ex08_03.html</h3>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+Tempora iste repudiandae commodi suscipit consequatur aperiam 
+voluptatibus corrupti a enim quos rerum veritatis aliquam soluta.
+Quo reiciendis corporis repellendus quos excepturi.
+</p>
+
+<div class="sticky_test"> hello world </div>
+<!-- div>p*3>lorem -->
+<div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione cumque modi sapiente dolor vero quaerat eligendi mollitia ut hic iure omnis voluptate nihil. Harum possimus error similique eum adipisci animi!</p>
+	<p>Dolorum debitis delectus odit praesentium laudantium aspernatur rem ullam veniam quo amet repellendus in id sit. Asperiores eaque ipsum eligendi neque reiciendis facere beatae magni voluptatem expedita pariatur laboriosam distinctio.</p>
+	<p>Dicta iste dolor id mollitia molestiae voluptatem ratione praesentium impedit natus quidem neque exercitationem velit eaque ullam delectus magni porro asperiores fuga dolore quae temporibus vero beatae tempore ex nostrum.</p>
+</div>
+
+<pre>
+position:sticky
+	- IE 지원하지 않는다.
+	- Safari : webkit - 접두사를 붙인다.
+	- left, right, bottom, top 적어도 하나는 지정해야한다.
+</pre>
+
+</body>
+</html>

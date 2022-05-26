@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon "type = "image/x-icon" href = "../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+	/*#demo{			100점 */
+	div#demo{	/* 101점 */
+		/* 여러 개의 배경 이미지 설정 : 콤마(,) 나열 */
+		/* 
+		background-image: url('../images/img_flwr.gif'), url('../images/paper.gif');
+		background-repeat: no-repeat, repeat;
+		background-position: right bottom, left top;
+		*/
+		 
+		background: url('../images/img_flwr.gif') no-repeat right bottom
+						, url('../images/paper.gif') repeat left top;
+		
+	}
+</style>
+</head>
+<body>
+<h3>ex12.html - 여러 배경 이미지 (다중 배경) 추가</h3>
+
+<pre>
+1. background-size
+2. background-origin
+3. background-clip
+</pre>
+
+<!-- #demo>h1>lorem3^p*2>lorem -->
+<div id="demo">
+	<h1>Lorem ipsum dolor.</h1>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+	Quas nisi labore perferendis harum facere adipisci at quidem
+	quae maiores quisquam repellendus doloremque tempora
+	deserunt voluptatum itaque dolorum cumque quia. Nesciunt!
+	</p>
+	<p>
+	Doloremque nobis culpa officia ducimus sit obcaecati iusto animi
+	ratione facere sed incidunt enim veritatis quaerat laboriosam
+	distinctio! Ipsam hic temporibus esse reiciendis nihil dolores!
+	Quasi odit quas expedita modi.
+	</p>
+</div>
+
+</body>
+</html>

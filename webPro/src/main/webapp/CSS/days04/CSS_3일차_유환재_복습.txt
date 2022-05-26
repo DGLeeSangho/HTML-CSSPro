@@ -1,0 +1,183 @@
+
+1. "문제01_결과.png"   css 적용하세요 . 
+ (  1번 문제는  제일 마지막에 문제 풀어보세요 . )
+
+2.  버튼 3개 선언 후 클릭 이벤트 처리해서 경고창을 띄우세요.. 
+  ㄱ. onclick 속성
+  ㄴ. js 동적으로 이벤트 등록
+  ㄷ. jquery 사용
+  
+<button onclick="btn1()">버튼 1</button>
+<button onclick="btn2()">버튼 2</button>
+<button onclick="btn3()">버튼 3</button> 
+<script>
+  function btn1(){
+      alert("btn1");
+   }
+  document
+   
+   $("button:nth-of-type").click(function (){
+   
+   })
+<script>
+3. 위의 버튼이 클릭되면 class 속성을 active 로 설정 후 임의의 스타일 지정
+
+<style> 
+  .active{
+    border: solid 1px red;
+    background-color: blue;
+  } 
+</style> 
+	classList.add("active")
+	
+	addClass("active")
+
+3.  document.querySelectorAll("button")
+    document.querySelector() 
+    위의 두 함수와 코딩에 대해서 설명하세요.
+    All은 모든것 아래는 하나 첫번쨰꺼
+  <button>btn 1</button>
+  <button>btn 2</button>
+  <button>btn 3</button>
+  <button>btn 4</button>
+  <button>btn 5</button>
+
+<script>  
+   
+   var btn1 = document.querySelector("button");   
+   var btnNodeList = document.querySelectorAll("button");
+   
+</script>
+      
+4. tr:hover:not(:first-child){
+     background-color: #4caf50;
+  }
+  코딩에 대해서 설명하세요.
+
+첫번째 tr을 제외한 나머지 tr의 배경색이 마우스를 올려둘 경우 #4caf50 적용
+   
+
+5. display="none"        	영역 차지 X block
+   visibility="hidden"  		영역 차지 O visible
+   위의 두 속성의 차이점을 설명하세요.
+
+6. jquery  메서드 설명
+  ㄱ. css("속성명","속성값")
+  ㄴ. show()  보여지다
+  ㄷ. hide() 	숨기다
+  ㄹ. toggle()  
+  ㅁ. slideToggle()
+  ㅂ. addClass()   
+  ㅅ. removeClass()   
+  
+7.  position(위치) 속성에 대해 설명하세요.
+  ㄱ. static   기본값
+  ㄴ. relative 상대좌표
+  ㄷ. fixed    고정
+  ㄹ. absolute   절대좌표
+  ㅁ. sticky    사용자의 스크롤 위치에 따라 배치
+  
+8. [ BOM ] window 내장객체  window.alert();   alert();
+           window.document 내장 객체
+           document.location="이동 URL";
+   [ DOM ]
+   document.createElement()
+   document.appendChild()
+   를 사용해서 (js를 사용) <button> 요소를 10개 동적으로 생성하고
+   버튼을 클릭하면 숨기도록 코딩하세요..
+   
+  <script>
+	for (var i = 0; i < 10; i++) {
+		var btn = document.createElement("button")
+		btn.innerText="btn - " + (i+1)
+		btn.onclick = function(){
+			// $(this).hide()
+		}
+		document.body.appendChild(btn)
+		var br = document.createElement(br)
+		document.body.appendChild(br)
+	}
+</script>
+ 
+ <script>
+   for (var i = 1; i <=10; i++) {
+      var btn = document.createElement("button");
+      btn.append("버튼 - "+ i);
+      var bd = document.querySelector("body");
+      bd.appendChild(btn);
+      bd.appendChild(document.createElement("br"));
+   }
+   
+/*    for (var i = 1; i <=10; i++) {
+      $("body").append($("<button>버튼 - "+i+"</button><br>"));
+
+   } */
+</script>
+
+<script>
+
+   var btns = document.querySelectorAll("button");
+   
+   for (var i = 0; i < btns.length; i++) {
+      btns[i].onclick = function() {
+         this.style.display="none";
+      }
+   }
+</script>
+9. 위의 문제8번을 jquery로 코딩해 보세요...
+
+for (var i = 0; i < 10; i++) {
+		$("body").append ($("<button> 버튼 - " + (i+1) + "</button><br>"))
+	}
+
+10-1. 아래 코딩에 대해서 각 라인 별로 주석을 달아서 설명하세요 
+<script>   
+  var links = document.querySelectorAll("div.topnav a");  
+  for (var i = 0; i < links.length; i++) {
+	   links[i].onclick = function (){ 
+		   for (var i = 0; i < links.length; i++) { 
+			  links[i].classList.remove("active");
+		  }  
+		   this.classList.add("active");
+	   };
+  }
+</script>
+
+10-2. 위의 10-1번 문제를 jquery로 코딩하세요. 
+
+11-1. 아래 코딩에 대해서 각 라인 별로 주석을 달아서 설명하세요 
+<script> 
+     document.querySelector("#btn1").onclick = function (){ 
+    	var pelemt = document.querySelector("#demo"); 
+    	for (var i = 1; i <= 10 ; i++) {
+    		var btn = document.createElement("button");
+    		var txtNode = document.createTextNode("버튼-"+ (i+1)); 
+    	     btn.appendChild(txtNode); 
+    	     pelemt.appendChild(btn);
+    	     pelemt.appendChild(    document.createElement("br")   );
+		} 
+     };
+  </script>
+  
+11-2. 위의 11-1번 문제를 jquery로 코딩하세요. 
+
+12. 아래 코딩에 대해서 각 라인 별로 주석을 달아서 설명하세요 
+<script>
+    $(".pagination a").click(function(event) { 
+    	$(".pagination a").not(this).removeClass("active"); 
+    	$(this).addClass("active");
+    });
+</script>
+
+13. overflow 속성 설명하세요 
+    ㄱ. visible( 기본값)  영역 외부에 넘치는 콘텐츠가 출력됨
+     ㄴ. hidden 잘라내어 숨긴다
+     ㄷ. scroll  스크롤바가 생긴다  내용이 오버되지않아도 스크롤바 생김
+     ㄹ. auto  스크롤바가 생기는데 내용이 안에 들어간다면 생기지 않음
+
+14.  아래 코딩을 설명하세요.
+  #mySidenav a{ 
+    transition:0.5s ease;
+  }
+   
+좌표가 변환할때 걸리는 시간과 방식을 나타낸다
